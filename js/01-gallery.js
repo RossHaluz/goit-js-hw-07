@@ -33,7 +33,7 @@ function onClick(evt) {
         const instance = basicLightbox.create(`
         <img src="${url}" width="800" height="600">`, {
           onShow: (instance) => {
-            document,addEventListener('keydown', onClick)
+            document.addEventListener('keydown', closeModal)
           },
           onClose: (instance) => {
             document.removeEventListener('keydown', closeModal)
