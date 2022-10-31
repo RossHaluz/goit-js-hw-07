@@ -31,7 +31,14 @@ function onClick(evt) {
         return
     } 
         const instance = basicLightbox.create(`
-        <img src="${url}" width="800" height="600">`)
+        <img src="${url}" width="800" height="600">`, {
+          onShow: (instance) => {
+            document,addEventListener('keydown', onClick)
+          },
+          onClose: (instance) => {
+            document.removeEventListener('keydown', closeModal)
+          }
+        })
         instance.show();
 
     galleryPhotos.addEventListener('keydown', closeModal)
