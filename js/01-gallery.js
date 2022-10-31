@@ -41,8 +41,6 @@ function onClick(evt) {
         })
         instance.show();
 
-    galleryPhotos.addEventListener('keydown', closeModal)
-
     function closeModal(evt) {
     if (evt.code === "Escape") {
         instance.close()
